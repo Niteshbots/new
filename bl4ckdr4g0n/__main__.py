@@ -4,7 +4,7 @@ import re
 from typing import Optional, List
 
 from telegram import Message, Chat, Update, Bot, User
-from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
+from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.error import Unauthorized, BadRequest, TimedOut, NetworkError, ChatMigrated, TelegramError
 from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryHandler
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
@@ -18,7 +18,7 @@ from bl4ckdr4g0n.modules.connection import connected
 from bl4ckdr4g0n.modules.helper_funcs.chat_status import is_user_admin
 from bl4ckdr4g0n.modules.helper_funcs.misc import paginate_modules
 from bl4ckdr4g0n.modules.translations.strings import tld, tld_help
-PM_START = """Hlw {}, my name is *{}* ! 
+PM_START = PM_START = """Hlw {}, my name is *{}* ! 
 want any Help click - /help
 
 Want to,
@@ -129,7 +129,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         try:
             update.effective_message.reply_text("Hii, how are you ?")
         except:
-            print("Nut")
+            print("No")
 
 
 def send_start(bot, update):
@@ -525,7 +525,7 @@ def get_settings(bot: Bot, update: Update):
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
             text = "Click here to get this chat's settings, as well as yours."
-            msg.reply_text(text,
+            msg.replytext(text,
                            reply_markup=InlineKeyboardMarkup(
                                [[InlineKeyboardButton(text="Settings",
                                                       url="t.me/{}?start=stngs_{}".format(
@@ -534,7 +534,7 @@ def get_settings(bot: Bot, update: Update):
             text = "Click here to check your settings."
 
     else:
-        send_settings(chat.id, user.id, update, True)
+        send_settins(chat.id, user.id, True)
 
 
 def migrate_chats(bot: Bot, update: Update):
