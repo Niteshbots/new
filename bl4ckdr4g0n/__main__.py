@@ -145,7 +145,7 @@ def send_start(bot, update):
     text = PM_START
 
     keyboard = [[InlineKeyboardButton(text="➕ Add me to a Group ➕", url="http://telegram.me/SarikaRoBot?startgroup=botstart")]]
-    keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"),
+    keyboard += [[InlineKeyboardButton(text="🇮🇳 Language", callback_data="set_lang_"),
                   InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
 
     update.effective_message.reply_text(PM_START.format(escape_markdown(first_name), bot.first_name),
@@ -178,7 +178,7 @@ def control_panel(bot, update):
 
         bl4ckdr4g0n.LOGGER.info(query.data)
     else:
-        M_match = "blackdragon is the lit af"  # LMAO, don't uncomment
+        M_match = "Rahul Genius"  # LMAO, don't uncomment
 
     if M_match:
         text = "*Control panel* 🛠"
