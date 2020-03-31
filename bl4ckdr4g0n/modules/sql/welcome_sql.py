@@ -6,8 +6,9 @@ from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, BigInteger
 from bl4ckdr4g0n.modules.helper_funcs.msg_types import Types
 from bl4ckdr4g0n.modules.sql import SESSION, BASE
 
-DEFAULT_WELCOME = "Hey {mention}, how are you?"
-DEFAULT_GOODBYE = "Nice to meet you!"
+DEFAULT_WELCOME = "Hey {first}, how are you?"
+DEFAULT_GOODBYE = "Nice knowing you!"
+
 
 class Welcome(BASE):
     __tablename__ = "welcome_pref"
